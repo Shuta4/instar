@@ -1,4 +1,4 @@
-#!/bin/python3.7
+#!/bin/python
 
 import subprocess
 import os
@@ -75,6 +75,8 @@ def main():
   )
 
   # Create desktop entry
+  if not create_de:
+    return
   de_path = f"{p_dir}{p_name}/{p_name}.desktop"
   if os.path.isfile(de_path):
     print("Desktop entry already exist.")
